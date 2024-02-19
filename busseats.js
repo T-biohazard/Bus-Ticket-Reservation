@@ -6,7 +6,6 @@ let Total = 0;
 let GrandTotal = 0;
 for (const seat of seats) {
     seat.addEventListener('click', function () {
-
         if (!seatsArray.includes(seat.innerText)) {
             if (seatsArray.length < 4) {
                 seatsArray.push(seat.innerText);
@@ -14,17 +13,16 @@ for (const seat of seats) {
                 setAvailableSeats();
                 ticketlist();
                 sum();
-                
+
             }
             else {
                 alert('You cant add more than 4 seat');
             }
-            // seat.style.backgroundColor = 'skyblue';
-
         }
         else {
             seat.style.backgroundColor = '';
-            seatsArray.pop();
+            const arraytext = seat.innerText;
+            seatsArray = seatsArray.filter(i => i != arraytext);
             setAvailableSeats();
             ticketlist();
             sum();
@@ -54,8 +52,7 @@ function ticketlist() {
     }
 }
 
-sum();
-function sum() {
+sum(); function sum() {
     Total = 550 * seatsArray.length;
     document.getElementById('total').innerText = Total;
 
@@ -73,7 +70,7 @@ function sum() {
                 gTotal.innerText = GrandTotal;
                 document.getElementById('label').classList.add('hidden');
             })
-            
+
         }
         else if (text === 'Couple 20') {
             couponBtn.removeAttribute('disabled');
