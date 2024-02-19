@@ -334,16 +334,16 @@
             <div class="flex-grow">   
                 <h3 class="text-2xl font-semibold mb-6">Select your Seat</h3>
                 <hr>
-                <div class="bg-[#F7F8F8] rounded-xl p-8">
+                <div class="bg-[#F7F8F8] rounded-xl p-8 my-8">
                     <div class="flex justify-between font-medium">
-                        <p>Seat<span class="bg-[#1DD100]  rounded-3xl px-2 text-white">2</span></p>
+                        <p>Seat<span id="selectedSeats" class="bg-[#1DD100]  rounded-3xl px-2 text-white">2</span></p>
                         <p>class</p>
                         <p>Price</p>
                     </div>
                     <hr class="my-3">
                     <!-- 
                         added sits 
-                        -->
+                     -->
                     <div id="ticketlist" class="font-light text-[#030712B3]">
                         <div class="flex justify-between">
                             <p>C2</p>
@@ -371,7 +371,7 @@
                         <input type="text" placeholder="Enter Your Phone" class="input input-bordered w-full" />
                         <p>Email ID</p>
                         <input type="text" placeholder="Enter Your Email ID" class="input input-bordered w-full"/>
-                        <input type="button" value="Next" class="btn w-full bg-[#1DD100]">
+                        <input onclick="nextbut()"  type="button" value="Next" class="btn w-full bg-[#1DD100]">
         
                        </div>
         
