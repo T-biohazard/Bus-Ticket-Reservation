@@ -26,8 +26,6 @@ function nextbut() {
 
 function butbut() {
 
-
-    //if(){}
     const homeSec = document.getElementById('foot');
     homeSec.classList.remove('hidden');
 
